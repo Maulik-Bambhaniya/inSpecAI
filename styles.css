@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
+body, .stApp {
+    background: linear-gradient(135deg, #0f0f23 0%, #1e1e3f 100%);
+    color: #eee;
+    font-family: 'Poppins', sans-serif;
+}
+.header {
+    text-align: center;
+    padding: 1rem 0;
+}
+.header h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: -0.5rem;
+}
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem; /* Increased gap for better spacing */
+    margin: 1.5rem 0 2.5rem 0; /* Adjusted margin */
+}
+.stat-card {
+    background: rgba(15, 15, 35, 0.8);
+    border-radius: 15px; /* Slightly more rounded */
+    padding: 1.2rem; /* Increased padding */
+    text-align: center;
+    box-shadow: 0 0 15px rgba(78, 205, 196, 0.4); /* Softer, wider glow */
+    transition: transform 0.2s ease-in-out;
+}
+.stat-card:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+}
+.stat-value {
+    font-size: 2.2rem; /* Larger font size */
+    font-weight: 800; /* Bolder */
+    color: #4ecdc4;
+    text-shadow: 0 0 8px rgba(78, 205, 196, 0.7); /* Text glow */
+}
+.stat-label {
+    font-size: 0.95rem; /* Slightly larger */
+    color: #aaa;
+    text-transform: uppercase;
+    margin-top: 0.4rem; /* More spacing */
+    letter-spacing: 0.05em;
+}
+.result-card {
+    background: rgba(15, 15, 35, 0.9);
+    border-radius: 12px;
+    padding: 1.5rem; /* More padding */
+    margin: 1.5rem 0; /* More margin */
+    text-align: center;
+    box-shadow: 0 0 20px rgba(78, 205, 196, 0.6); /* More prominent shadow */
+}
+.result-success {
+    border: 2px solid #4ecdc4;
+    color: #4ecdc4;
+}
+.result-error {
+    border: 2px solid #ff6b6b;
+    color: #ff6b6b;
+}
+.upload-area {
+    border: 2px dashed #667eea;
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    color: #aaa;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.loading-text {
+    color: #4ecdc4;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+.sidebar-section {
+    background: rgba(15, 15, 35, 0.8);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px #4ecdc4;
+    text-align: center;
+    color: #eee;
+}
+
+/* New/Enhanced CSS for Hero Section and Neon Cards */
+.hero-container {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+.hero-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(78, 205, 196, 0.1) 0%, rgba(255, 107, 107, 0.05) 50%, transparent 70%);
+    animation: rotate-bg 20s linear infinite;
+    z-index: 0;
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.hero-title {
+    font-weight: 900;
+    font-size: 4.5rem; /* Larger title */
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(78, 205, 196, 0.8); /* Stronger glow */
+    margin-bottom: 0.5rem;
+}
+.hero-subtitle {
+    font-size: 1.8rem; /* Larger subtitle */
+    color: #ccc;
+    margin-top: -0.5rem;
+    font-weight: 300;
+}
+.hero-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 1.5rem;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.5);
+}
+
+.neon-card {
+    background: rgba(15, 15, 35, 0.95);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 25px rgba(78, 205, 196, 0.5); /* Stronger neon glow */
+    border: 1px solid rgba(78, 205, 196, 0.3);
+}
+.neon-card h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(78, 205, 196, 0.7);
+}
+
+/* Result Card enhancements */
+.result-status {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+}
+.status-indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.status-indicator.success {
+    background-color: #4ecdc4;
+    box-shadow: 0 0 10px #4ecdc4;
+}
+.status-indicator.error {
+    background-color: #ff6b6b;
+    box-shadow: 0 0 10px #ff6b6b;
+}
+.result-classification, .result-confidence {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 0.4rem;
+}
+.result-classification strong {
+    color: #eee;
+    font-weight: 600;
+}
+
+/* Loading Spinner */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.loading-spinner {
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-top: 6px solid #4ecdc4;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes rotate-bg {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Streamlit overrides */
+.stTabs [data-baseweb="tab-list"] button [data-testid="stMarkdownContainer"] p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.stButton>button {
+    background-color: #667eea;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.stButton>button:hover {
+    background-color: #764ba2;
+    transform: translateY(-2px);
+}
+.stFileUploader label {
+    color: #aaa; /* Hidden by JS, but good fallback */
+}
+.css-1d391kg.e16z5icm4 { /* Specific target for file uploader border */
+    border: 2px dashed #667eea !important;
+    border-radius: 12px !important;
+    padding: 3rem !important;
+    text-align: center !important;
+    color: #aaa !important;
+    cursor: pointer !important;
+    margin-bottom: 1rem !important;
+}
+.stExpander {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(78, 205, 196, 0.3);
+    background: rgba(15, 15, 35, 0.8);
+    box-shadow: 0 0 10px rgba(78, 205, 196, 0.2);
+}
+.stExpander div[role="button"] p {
+    color: #4ecdc4 !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
