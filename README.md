@@ -118,7 +118,7 @@ plotly
 
 ## 📸 Screenshots
 
-[Demo Screenshot](demo.png)
+![Demo Screenshot](https://github.com/user-attachments/assets/b6c6c24d-9b51-483b-a638-1125232db9dd)
 
 
 
